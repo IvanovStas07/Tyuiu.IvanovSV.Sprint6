@@ -17,7 +17,11 @@ namespace Tyuiu.IvanovSV.Sprint6.Task0.V14
             {
                 int x = int.Parse(textBoxInput_ISV.Text);
                 double result = ds.Calculate(x);
-                textBoxResult_ISV.Text = result.ToString("F3");
+                if (result % 1 == 0)
+                {
+                    textBoxResult_ISV.Text = result.ToString("F0");
+                }
+                else { textBoxResult_ISV.Text = result.ToString("F3"); }
             }
             catch (Exception ex)
             {
