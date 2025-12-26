@@ -1,23 +1,25 @@
-﻿using tyuiu.cources.programming.interfaces.Sprint3;
+﻿
+using tyuiu.cources.programming.interfaces.Sprint6;
 
 namespace Tyuiu.IvanovSV.Sprint6.Task3.V7.Lib
 {
-    public class DataService : ISprint3Task3V3
+    public class DataService : ISprint6Task3V7
     {
-        public int GetMinCharCount(string value, char item)
+        public int[,] Calculate(int[,] matrix)
         {
-            int count = 0;
-            foreach (char c in value)
+            for (int i = 0; i < matrix.GetLength(0); i++)
             {
-                if (c == item)
+                for (int j = i + 1; j < matrix.GetLength(0); j++)
                 {
-                    count = 2;
-                    continue;
-
+                    if (matrix[j, 3] < matrix[i, 3])
+                    {
+                        int temp = matrix[i, 3];
+                        matrix[i, 3] = matrix[j, 3];
+                        matrix[j, 3] = temp;
+                    }
                 }
-
             }
-            return count;
+            return matrix;
         }
     }
 }
