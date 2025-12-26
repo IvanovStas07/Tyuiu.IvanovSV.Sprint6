@@ -37,6 +37,8 @@
             groupBoxCondition_ISV = new GroupBox();
             groupBoxInput_ISV = new GroupBox();
             groupBoxOutput_ISV = new GroupBox();
+            backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            backgroundWorker2 = new System.ComponentModel.BackgroundWorker();
             groupBoxCondition_ISV.SuspendLayout();
             groupBoxInput_ISV.SuspendLayout();
             groupBoxOutput_ISV.SuspendLayout();
@@ -127,6 +129,7 @@
             groupBoxInput_ISV.TabIndex = 9;
             groupBoxInput_ISV.TabStop = false;
             groupBoxInput_ISV.Text = "Ввод данных";
+            groupBoxInput_ISV.Enter += groupBoxInput_ISV_Enter;
             // 
             // groupBoxOutput_ISV
             // 
@@ -147,7 +150,7 @@
             // 
             AutoScaleDimensions = new SizeF(14F, 32F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1236, 715);
+            ClientSize = new Size(1668, 715);
             Controls.Add(groupBoxOutput_ISV);
             Controls.Add(buttonCalculatePush_ISV);
             Controls.Add(groupBoxInput_ISV);
@@ -176,5 +179,7 @@
         private GroupBox groupBoxCondition_ISV;
         private GroupBox groupBoxInput_ISV;
         private GroupBox groupBoxOutput_ISV;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
+        private System.ComponentModel.BackgroundWorker backgroundWorker2;
     }
 }
