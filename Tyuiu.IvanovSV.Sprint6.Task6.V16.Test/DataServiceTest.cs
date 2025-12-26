@@ -8,7 +8,7 @@ namespace Tyuiu.IvanovSV.Sprint6.Task6.V16.Test
         public void TestMethod1()
         {
             DataService ds = new DataService();
-            string path = @"C:\DataSprint6\InPutFileTask6V16.txt";
+            string path = @"C:\Users\Станислав\source\repos\Tyuiu.IvanovSV.Sprint6\DataSprint6\InPutDataFileTask6V16.txt";
             string res = ds.CollectTextFromFile(path);
             string wait = "brIBPtX bWk";
             Assert.AreEqual(wait, res);
