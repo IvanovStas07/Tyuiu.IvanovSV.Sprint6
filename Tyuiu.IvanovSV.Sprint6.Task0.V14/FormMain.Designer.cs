@@ -129,7 +129,6 @@
             groupBoxInput_ISV.TabIndex = 9;
             groupBoxInput_ISV.TabStop = false;
             groupBoxInput_ISV.Text = "Ввод данных";
-            groupBoxInput_ISV.Enter += groupBoxInput_ISV_Enter;
             // 
             // groupBoxOutput_ISV
             // 
